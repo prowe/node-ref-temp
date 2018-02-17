@@ -4,6 +4,12 @@ Parameters:
   Image:
     Type: String
     Description: Docker image to run
+  VpcId:
+    Type: AWS::EC2::VPC::Id
+    Description: Id of the VPC
+  SubnetIds:
+    Type: List<AWS::EC2::Subnet::Id>
+    Description: List of subnet Ids to run in
 Resources:
   ECSCluster:
     Type: "AWS::ECS::Cluster"

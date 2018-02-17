@@ -126,6 +126,7 @@ Resources:
               TemplatePath: buildResults::cloudformation.template.yml
               RoleArn: !GetAtt PipelineRole.Arn
               Capabilities: CAPABILITY_IAM
+              TemplateConfiguration: "buildResults::dev.parameters.json"
               #Because the image URL is not static between builds, we need to inject it here so that it can change each build
               #this special syntax looks up the value we placed in the outputProperties.json file and passes it to our template
               #Do not put secret values here as they are visible in the code pipeline GUI
@@ -152,6 +153,7 @@ Resources:
               TemplatePath: buildResults::cloudformation.template.yml
               RoleArn: !GetAtt PipelineRole.Arn
               Capabilities: CAPABILITY_IAM
+              TemplateConfiguration: "buildResults::prod.parameters.json"
               ParameterOverrides: !Sub |
                 {
                   "Image": { "Fn::GetParam" : [ "buildResults", "outputProperties.json", "image" ] }

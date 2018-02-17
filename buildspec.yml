@@ -21,4 +21,6 @@ artifacts:
   discard-paths: yes
   files:
     - "cloudformation.template.yml"
+    - "dev.parameters.json"
+    - "prod.parameters.json"
     - "outputProperties.json"
