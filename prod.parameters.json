@@ -1,4 +1,6 @@
 {
-    "VpcId": "vpc-868750e3",
-    "SubnetIds": "subnet-5d24b151,subnet-c5c9fded,subnet-aca64cdb,subnet-2fb7df4a,subnet-62d9cd24,subnet-a8e18192"
+    "Parameters" : {
+        "VpcId": "vpc-868750e3",
+        "SubnetIds": "subnet-5d24b151,subnet-c5c9fded,subnet-aca64cdb,subnet-2fb7df4a,subnet-62d9cd24,subnet-a8e18192"
+    }
 }
